@@ -1,0 +1,50 @@
+{% extends "base.jin" %}
+
+{% block main %}
+
+    <form method="POST" action="" novalidate>
+        {{  signupform.hidden_tag() }}
+
+        <p>
+            {{ signupform.username.label }}
+            {{ signupform.username() }}
+            <span style="color:red">{{ signupform.username.errors[0] }}</span>
+        </p>
+
+        <p>
+            {{ signupform.email.label }}
+            {{ signupform.email() }}
+            <span style="color:red">{{ signupform.email.errors[0] }}</span>
+        </p>
+
+        <p>
+            {{ signupform.password.label }}
+            {{ signupform.password() }}
+            <span style="color:red">{{ signupform.password.errors[0] }}</span>
+        </p>
+
+        <p>
+            {{ signupform.password_confirm.label }}
+            {{ signupform.password_confirm() }}
+            <span style="color:red">{{ signupform.password_confirm.errors[0] }}</span>
+        </p>
+
+        <p>
+           {{signupform.age.label  }}
+            {{ signupform.age() }}
+            <span style="color:red">{{ signupform.age.errors[0] }}</span>
+        </p>
+
+        <p>
+           {{signupform.city.label }}
+           {{ signupform.city() }}
+            <span style="color:red">{{ signupform.city.errors[0] }}</span>
+        </p>
+
+        <p>
+            {{ signupform.submit() }}
+        </p>
+
+    </form>
+
+{% endblock %}

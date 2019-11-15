@@ -1,0 +1,21 @@
+{###################################################}
+{######                                       ######}
+{######    pyblog/templates/users_list.jin    ######}
+{######                                       ######}
+{###################################################}
+
+{% extends "base.jin" %}
+
+{% block main %}
+    <h1>Users:</h1>
+    <ol>
+        {% for user in users %}
+            {% if user.id != current_user.id %}
+                <a href="{{ url_for('user_profile',  user_id=user.id) }}"><li>{{ user.name }} - {{ user.email }}</li></a>
+            {% endif %}
+        {% endfor %}
+    </ol>
+
+
+{% endblock %}
+

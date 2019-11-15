@@ -1,0 +1,146 @@
+{% extends "base.jin" %}
+
+{% block main %}
+
+    <div class="container contact">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="contact-info">
+                    <h2>CREATE CREATIVE CV</h2>
+                    <h4>We would love to SERVE YOU!</h4>
+                </div>
+            </div>
+            <div class="col-md-9">
+
+                <form class="contact-form" action="" method="POST" novalidate>
+                    {{ form.hidden_tag() }}
+
+                        <fieldset class="form-group">
+                            <legend class="border-bottom mb-4">Pesonal Details:</legend>
+                            <hr>
+
+                            <div class="form-group">
+                                <div class="control-label col-sm-2">{{ form.first_name.label }}</div>
+                                <div class="col-sm-10">
+                                    {{ form.first_name(class="form-control",placeholder="Enter First Name") }}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="control-label col-sm-2">{{ form.last_name.label }}</div>
+                                <div class="col-sm-10">
+                                    {{ form.last_name(class="form-control",placeholder="Enter Last Name") }}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">{{ form.email.label }}</label>
+                                <div class="col-sm-10">
+                                    {{ form.email(class="form-control",placeholder="Enter Your Email") }}
+                                </div>
+                            </div>
+                        </fieldset>
+
+
+                         <fieldset class="form-group">
+                            <legend class="border-bottom mb-4">Education:</legend>
+                            <hr>
+                            <hr>
+
+                            <div class="form-group">
+
+                                <label class="control-label col-sm-2">{{ form.school.label }}</label>
+
+
+                                <div class="col-sm-10">
+                                    {{ form.school(class="form-control") }}
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">{{ form.degree.label }}</label>
+                                <div class="col-sm-10">
+                                    {{ form.degree(class="form-control") }}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">{{ form.Edu_start.label }}</label>
+                                <div class="col-sm-10">
+                                    {{ form.Edu_start(class="form-control") }}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">{{ form.Edu_end.label }}</label>
+                                <div class="col-sm-10">
+                                    {{ form.Edu_end(class="form-control") }}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">{{ form.city.label }}</label>
+                                <div class="col-sm-10">
+                                    {{ form.city(class="form-control") }}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">{{ form.degree_explanation.label }}</label>
+                                <div class="col-sm-10">
+                                    {{ form.degree_explanation(class="form-control") }}
+                                </div>
+                            </div>
+
+                        </fieldset>
+
+
+                        <fieldset class="form-group">
+                            <legend class="border-bottom mb-4">Work Experience:</legend>
+                            <hr>
+                            <div class="form-group">
+                                <div class="control-label col-sm-2">{{ form.company_name.label }}</div>
+                                <div class="col-sm-10">
+                                    {{ form.company_name(class="form-control") }}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="control-label col-sm-2">{{ form.job_title.label }}</div>
+                                <div class="col-sm-10">
+                                    {{ form.job_title(class="form-control") }}
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="control-label col-sm-2">{{ form.date_from.label }}</div>
+                                <div class="col-sm-10">
+                                    {{ form.date_from(class="form-control") }}
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">{{ form.to.label }}</label>
+                                <div class="col-sm-10">
+                                    {{ form.to(class="form-control") }}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">{{ form.work_explanation.label }}</label>
+                                <div class="col-sm-10">
+                                    {{ form.work_explanation(class="form-control") }}
+                                </div>
+                            </div>
+
+                        </fieldset>
+
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button>{{ form.submit(class="btn btn-default") }}</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+{% endblock %}
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pyblog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/master.css') }}">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="horizontal-navbar">
+        <a href="{{ url_for('homepage') }}">Homepage</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+        <a href="{{ url_for('users_list') }}">Users</a>
+        {%  if current_user.is_authenticated %}
+            <a href="{{ url_for('newpost') }}">Add post</a>
+            <a href="{{ url_for('create_cv') }}">Create Cv</a>
+            <p class="ignored"><a class="ignored" href="{{  url_for('user_profile', user_id=current_user.id) }}">{{ current_user.name }}</a> (<a class="ignored" href="{{ url_for('signout') }}">Sign out</a>)</p>
+
+        {%  else %}
+            <a href="{{ url_for('signup') }}">Sign Up</a>
+            <a href="{{ url_for('signin') }}">Sign In</a>
+            <form method="POST" action="{{ url_for("bridge_tag") }}">
+                <input type="text" name="searched_text" placeholder="Search...">
+
+                <input type="submit" value="Submit">
+            </form>
+
+
+        {%  endif %}
+    </div>
+
+{#    <div class="container">#}
+{##}
+{#        <div class="flashed_msg">#}
+{#            {% for message in get_flashed_messages() %}#}
+{#            <p>{{ message }}</p>#}
+{#            {% endfor %}#}
+{#        </div>#}
+{#    </div>#}
+<div class="container">
+        {% block main %}
+        {% endblock %}
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

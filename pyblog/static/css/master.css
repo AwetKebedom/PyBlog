@@ -1,0 +1,171 @@
+htnl{
+  background-color: red;
+  margin: 0;
+}
+
+p, h1{
+  font-family: "sans-serif";
+}
+.container{
+
+  margin: 5%;
+
+
+}
+
+.horizontal-navbar{
+  background-color: #AF4425;
+  margin:0;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.horizontal-navbar a:not(.ignored){
+  text-decoration:none;
+  color: #ebdcb2;
+  height: 100%;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 15px;
+}
+
+.horizontal-navbar p{
+  text-decoration:none;
+  color: #ebdcb2;
+}
+
+.horizontal-navbar p a{
+  text-decoration:none;
+  color: #ebdcb2;
+}
+
+.horizontal-navbar p a:hover{
+  text-decoration:underline;
+}
+
+.horizontal-navbar a:not(.ignored):hover{
+  background-color: #d45733;
+  text-shadow: 1px 1px 5px #000;
+}
+
+.posts_container{
+  width: 80%;
+  margin: auto;
+}
+
+.username{
+  margin-bottom: 2px;
+  padding-bottom: 0;
+}
+
+.posts_container ol{
+  list-style-type: none;
+}
+
+.post{
+  width: 80%;
+  background-color: antiquewhite;
+  padding: 1px 20px;
+  margin: 10px 0;
+  border-radius: 15px;
+  box-shadow: 2px 2px 5px;
+}
+
+.post p{
+  font-family: Serif;
+}
+
+.post_title{
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 8px;
+}
+
+.post_pubdate{
+  position:relative;
+  left: 85%;
+  font-size: 13px;
+}
+
+.post-tag{
+  font-weight: bold;
+}
+
+.top-right{
+  position: relative;
+  float: right;
+    top: -50px;
+}
+
+.container-contact{
+
+    margin-top:450px;
+}
+.contact{
+		padding: 4%;
+		height: 200px;
+
+	}
+.contact h2,h4{
+    color: white;
+}
+fieldset legend{
+    color: #d45733;
+    font-weight: bold;
+}
+
+.col-md-3{
+		background: #d45733;
+
+		padding: 5PX;
+		border-top-left-radius: 0.5rem;
+		border-bottom-left-radius: 0.5rem;
+	}
+.contact-info{
+		margin-top:20%;
+	}
+.contact-info img{
+		margin-bottom: 15%;
+	}
+.contact-info h2{
+		margin-bottom: 10%;
+	}
+.col-md-9{
+		background: #ebdcb2;
+		padding: 5%;
+		border-top-right-radius: 0.5rem;
+		border-bottom-right-radius: 0.5rem;
+	}
+.contact-form label{
+		font-weight:600;
+	}
+.contact-form button{
+		background: #25274d;
+		color: #fff;
+		font-weight: 600;
+		width: 25%;
+	}
+.contact-form button:focus{
+		box-shadow:none;
+	}
+.contact-form .btn{
+		color: white;
+	}
+.col-sm-2{
+        font-size:1.2em;
+    }
+
+hr { display: block; height: 1px;
+    border: 0; border-top: 1px solid #ccc;
+    margin: 1em 0; padding: 0; }
+
+.row{
+    margin-bottom: 100px;
+
+
+}

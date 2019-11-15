@@ -1,0 +1,29 @@
+{% extends "base.jin" %}
+
+
+{% block main %}
+    <form method="POST" novalidate action="">
+        {{ form.hidden_tag() }}
+
+       <p>
+           {{ form.title.label() }}
+           {{ form.title() }}
+       </p>
+       <p>
+           {{ form.content.label() }}
+           {{ form.content() }}
+       </p>
+       <p>
+           {{ form.submit() }}
+       </p>
+    </form>
+{% endblock %}
+
+
+{% block footer %}
+
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}

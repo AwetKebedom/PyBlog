@@ -1,0 +1,26 @@
+{% extends "base.jin" %}
+
+{% block main %}
+    <div class="posts_container">
+        <ol>
+            {% for post in posts %}
+
+                <li class="post">
+                    <p class="post_title">{{ post.author.name }} says: {{ post.title }}</p>
+                    <p class="post_content">{{ post.get_formatted_content() }}</p>
+                    <p class="post_pubdate">{{ post.pub_date_as_str() }}</p>
+                </li>
+
+            {%  endfor %}
+        </ol>
+    </div>
+{% endblock %}
+
+
+{% block footer %}
+
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}
